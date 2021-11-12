@@ -1,0 +1,13 @@
+$ancho: 360px;
+$alto: 650px;
+
+section{
+    width: $ancho;
+    height: $alto;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
