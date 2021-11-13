@@ -5,25 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>Mr. Freeze</title>
 </head>
 <body>
     <!-- Splash -->
-	<section id="splash" style="background-color: red;">
-		<br>
-		<h1>Splash del juego</h1>
-		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
+	<section id="splash">
+		<img src="./img/helados.png" alt="">
+		<h1 class="title_name">Mr. Freeze</h1>
 	</section>
 	<!-- Home -->
 	<section id="home">
-		<br>
-		<h1>Nombre del juego</h1>
-		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
-		<br>
-		<br>
-		<a href="#">Juego</a><br><br>
-		<a href="#">Instrucciones</a><br><br>
-		<a href="#">Créditos</a><br>
+		<h1>Mr. Freeze</h1>
+		<a href="">Hacer Pedido</a><br><br>
+		<a href="">Dirección</a><br><br>
+		<a href="">Salir</a><br>
+	</section>
+	<!-- Hacer pedido -->
+	<section id="pedido">
+		<div class="section_header">
+			<div class="button_back"></div>
+			<h1>Pedido</h1>
+		</div>
+		<div class="section_body">
+			<a href="">Tipo de helado</a>
+			<a href="">Dirección de envio</a>
+		</div>
+		<div class="section_footer">
+			<div class="money">
+				<p>Total:</p>
+				<p class="Total_money">$$$</p>
+			</div>
+		</div>
+	</section>
+	<!-- Helados -->
+	<section id="helados">
+		<div class="section_header">
+			<div class="button_back"></div>
+			<h1>Helados</h1>
+		</div>
+		<div class="section_body_2">
+			<select name="Tipo">
+				<option value="0" selected disabled>Tipos de helados</option>
+				<option value="1">2 mil (2 sabores)</option>
+				<option value="2">5 mil (3 sabores)</option>
+				<option value="3">10 mil (4 sabores)</option>
+			</select>
+			<select name="Sabor1">
+				<option value="0" selected disabled>Sabor 1</option>
+				<option value="1">vainilla</option>
+				<option value="2">chocolate</option>
+				<option value="3">fresa</option>
+			</select>
+			<select name="Sabor2">
+				<option value="1" selected disabled>Sabor 2</option>
+				<option value="2">vainilla</option>
+				<option value="3">chocolate</option>
+				<option value="4">fresa</option>
+			</select>
+		</div>
+		<div class="section_footer">
+			<a href="">Guardar</a>
+		</div>
+	</section>
+	<!-- gg wp gj -->
+	<section id="Check">
+		<img src="" alt="Check">
+		<h1>Pedido en camino</h1>
+		<a href="">Inicio</a>
+	</section>
+	<!-- Lista direcciones -->
+	<section id="lista_direcciones">
+		<div class="section_header">
+			<div class="button_back"></div>
+			<h1>Lista de direcciones</h1>
+		</div>
+		<div class="section_body_2">
+			<div class="direccion">
+				<h1>dirección1</h1>
+				<img src="" alt="delete">
+			</div>
+			<div class="direccion">
+				<h1>dirección2</h1>
+				<img src="" alt="delete">
+			</div>
+			<img src="" alt="agregar">
+		</div>
+	</section>
+	<!-- dirección -->
+	<section id="direccion">
+		<div class="section_header">
+			<div class="button_back"></div>
+			<h1>Direcciones</h1>
+		</div>
+		<div class="section_body_2">
+			<div class="direccion">
+				<h1>dirección1</h1>
+				<img src="" alt="delete">
+			</div>
+			<div class="direccion">
+				<h1>dirección2</h1>
+				<img src="" alt="delete">
+			</div>
+			<img src="" alt="agregar">
+		</div>
+		<div class="section_footer">
+			<a href="">Guardar</a>
+		</div>
+	</section>
+	<!-- Nueva dirección -->
+	<section id="newAddress">
+		<div class="section_header">
+			<div class="button_back"></div>
+			<h1>Nueva dirección</h1>
+		</div>
+		<div class="section_body_2">
+			<label for="name">Nombre dirección:</label>
+			<input name="name" id="nameAdress" type="text">
+			<label for="barrio">Barrio:</label>
+			<input type="text" name="barrio" id="nameBarrio">
+			<label for="address">Dirección:</label>
+			<input type="text" id="inputAddress" name="address">
+		</div>
+		<div class="section_footer">
+			<a href="">Guardar</a>
+		</div>
 	</section>
 </body>
 </html>
