@@ -1,0 +1,59 @@
+$boton_color: #F2CA82;
+$boton_border_color: #BE7F54;
+$boton_letra_color: #050827;
+$boton_letra2: #F0F3E8;
+$transition: 1s;
+
+.boton{
+    text-decoration: none;
+    transition: $transition;
+    color: $boton_letra_color;
+}
+.boton:active{
+    transform: scale(1.1);
+}
+.boton1{
+    width: 300px;
+    padding: 15px 0px;
+    border-radius: 10px;
+    background-color: $boton_color;
+    border: 2px solid $boton_border_color;
+    font-size: 30px;
+    text-align: center;
+}
+.boton2{
+    width: 220px;
+    padding: 15px 0px;
+    border-radius: 10px;
+    background-color: $boton_letra_color;
+    font-size: 30px;
+    text-align: center;
+    color: $boton_letra2;
+}
+.boton3{
+    width: 300px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: $boton_color;
+    font-size: 20px;
+    text-align: center;
+    color: $boton_letra_color;
+}
+
+.arrow-left {
+    border: solid $boton_color;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 9px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  .boton_back{
+      background-color: $boton_letra_color;
+      padding: 18px 18px;
+  }
+
+  .agregar{
+      font-size: 50px;
+      margin:0;
+  }

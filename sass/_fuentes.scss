@@ -1,5 +1,17 @@
 $title : 'Courgette', cursive;
+$boton: 'Architects Daughter', cursive;
+$title2: 'Patrick Hand', cursive;
+$letter: 'ABeeZee', sans-serif;
 
 .title_name{
     font-family: $title;
+}
+.boton{
+    font-family: $boton;
+}
+.title{
+    font-family: $title2;
+}
+.letter{
+    font-family: $letter;
 }

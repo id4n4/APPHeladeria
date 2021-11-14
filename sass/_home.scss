@@ -1,0 +1,13 @@
+$title_color: #050827;
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .title_name{
+        font-size: 60px;
+        color: $title_color;
+    }
+}

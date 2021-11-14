@@ -1,0 +1,24 @@
+$color1: #050827;
+
+.direccion{
+    color: $color1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    div{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1,p{
+            margin: 0;
+        }
+    }
+    .delete{
+        margin-right: 10px;
+        font-size: 30px;
+    }
+}
