@@ -11,7 +11,6 @@ section{
     width: $ancho;
     height: $alto;
     margin: 0 auto;
-    border: 2px solid $color3;
 
     .section_header{
         display: flex;
@@ -45,7 +44,7 @@ section{
         margin: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: start;
         align-items: center;
         height: 70%;
         background-color: $color2;
@@ -69,5 +68,8 @@ section{
         }
 
     }
+}
+.oculto{
+    display: none !important;
 }
 

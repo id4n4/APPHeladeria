@@ -1,4 +1,7 @@
 $color1: #050827;
+$color2: #F2CA82;
+$color3: #F0F3E8;
+$color4: #6CF4DC;
 
 .direccion{
     color: $color1;
@@ -21,4 +24,7 @@ $color1: #050827;
         margin-right: 10px;
         font-size: 30px;
     }
+}
+.changeColor{
+    background-color: $color2;
 }

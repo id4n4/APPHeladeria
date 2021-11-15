@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Architects+Daughter&family=Courgette&family=Patrick+Hand&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="./js/main.min.js"></script>
 	<link rel="stylesheet" href="css/main.min.css">
     <title>Mr. Freeze</title>
 </head>
-<body>
-    <!-- Splash -->
+<body onload="changeSplash(0,1)">
+    <!-- Splash 0-->
 	<section id="splash">
 		<div class="load">
 			<img src="./img/helados.png" alt="">
@@ -17,125 +18,94 @@
 		<h1 class="title_name">Mr. Freeze</h1>
 		<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 	</section>
-	<!-- Home -->
-	<section id="home">
+	<!-- Home 1-->
+	<section id="home" class="oculto">
 		<h1 class="title_name">Mr. Freeze</h1>
-		<a href="#pedido" class="boton boton1">Realizar Pedido</a><br><br>
-		<a href="#lista_direcciones" class="boton boton1">Direcciones</a><br><br>
-		<a href="" class="boton boton1">Salir</a><br>
+		<a href="#pedido" onclick="changeSection(1,2)" class="boton boton1">Realizar Pedido</a>
+		<a href="#lista_direcciones" onclick="changeSection(1,5)" class="boton boton1">Direcciones</a>
+		<a href="" class="boton boton1">Salir</a>
 	</section>
-	<!-- Hacer pedido -->
-	<section id="pedido">
+	<!-- Hacer pedido 2-->
+	<section id="pedido" class="oculto">
 		<div class="section_header">
 			<div class="boton_back">
-				<i class="arrow-left boton"></i>
+				<i onclick="changeSection(2,1)" class="arrow-left boton"></i>
 			</div>
 			<h1 class="title">Pedido</h1>
 		</div>
 		<div class="section_body">
-			<a href="#helados" class="boton boton2">Tipo de helado</a>
-			<a href="" class="boton boton2">Dirección de envio</a>
+			<a href="#Helados" onclick="changeSection(2,3)" class="boton boton2">Tipo de helado</a>
+			<a href="#Direccion" onclick="changeSection(2,6)" class="boton boton2">Dirección de envio</a>
 		</div>
 		<div class="section_footer">
 			<div class="money">
 				<p class="letter">Total:</p>
-				<p class="letter Total_money">$$$</p>
+				<p id="total_money" class="letter">$0</p>
 			</div>
 			<div>
-				<img src="img/send.png" alt="enviar" class="boton">
+				<img src="img/send.png" alt="enviar" onclick="changeSection(2,4)" class="boton">
 			</div>
 		</div>
 	</section>
-	<!-- Helados -->
-	<section id="helados">
+	<!-- Helados 3-->
+	<section id="helados" class="oculto">
 		<div class="section_header">
 			<div class="boton_back">
-				<i class="arrow-left boton"></i>
+				<i onclick="changeSection(3,2)" class="arrow-left boton"></i>
 			</div>
 			<h1 class="title">Helados</h1>
 		</div>
-		<div class="section_body">
-			<select name="Tipo" class="boton boton3">
+		<div id="selectHelado" class="section_body">
+			<select id="iceCream" name="Tipo" class="boton boton3" onchange="changeIceCream()">
 				<option value="0" selected disabled>Tipos de helados</option>
-				<option value="1">2 mil (2 sabores)</option>
-				<option value="2">5 mil (3 sabores)</option>
-				<option value="3">10 mil (4 sabores)</option>
-			</select>
-			<select name="Sabor1" class="boton boton3">
-				<option value="0" selected disabled>Sabor 1</option>
-				<option value="1">vainilla</option>
-				<option value="2">chocolate</option>
-				<option value="3">fresa</option>
-			</select>
-			<select name="Sabor2" class="boton boton3">
-				<option value="1" selected disabled>Sabor 2</option>
-				<option value="2">vainilla</option>
-				<option value="3">chocolate</option>
-				<option value="4">fresa</option>
+				<option value="2000">Cono ($2000)</option>
+				<option value="3000">Cono Mixto ($3000)</option>
+				<option value="4500">Sundae ($4500)</option>
+				<option value="5000">Sundae con maní($5000)</option>
 			</select>
 		</div>
 		<div class="section_footer">
-			<a href="#pedido" class="boton boton2">Guardar</a>
+			<a href="#pedido" onclick="saveIceCream()" class="boton boton2">Guardar</a>
 		</div>
 	</section>
-	<!-- gg wp gj -->
-	<section id="Check">
+	<!-- gg wp gj 4-->
+	<section id="Check" class="oculto">
 		<img src="img/camion-de-reparto.png" alt="Check">
 		<h1 class="title">Pedido en camino</h1>
-		<a href="#home" class="boton boton3">Inicio</a>
+		<a href="#home" onclick="changeSection(4,1)" class="boton boton3">Inicio</a>
 	</section>
-	<!-- Lista direcciones -->
-	<section id="lista_direcciones">
+	<!-- Lista direcciones 5-->
+	<section id="lista_direcciones" class="oculto">
 		<div class="section_header">
 			<div class="boton_back">
-				<i class="arrow-left boton"></i>
+				<i onclick="changeSection(5,1)" class="arrow-left boton"></i>
 			</div>
 			<h1 class="title">Lista de Direcciones</h1>
 		</div>
-		<div class="section_body2">
-			<div class="direccion">
-				<div>
-					<h1 class="title">Dirección1</h1>
-					<p class="letter">Barrio</p>
-					<p class="letter">Dirección</p>
-				</div>
-				<h1 class="boton delete">X</h1>
-			</div>
-			<div class="direccion">
-				<div>
-					<h1 class="title">Dirección2</h1>
-					<p class="letter">Barrio</p>
-					<p class="letter">Dirección</p>
-				</div>
-				<h1 class="boton delete">X</h1>
-			</div>
-			<div class="direccion">
-				<div>
-					<h1 class="title">Dirección2</h1>
-					<p class="letter">Barrio</p>
-					<p class="letter">Dirección</p>
-				</div>
-				<h1 class="boton delete">X</h1>
-			</div>
-			<div class="direccion">
-				<div>
-					<h1 class="title">Dirección2</h1>
-					<p class="letter">Barrio</p>
-					<p class="letter">Dirección</p>
-				</div>
-				<h1 class="boton delete">X</h1>
-			</div>
-			<h1 class="boton agregar">+</h1>
-		</div>
-		<div class="section_footer">
-			<a href="#pedido" class="boton boton2">Guardar</a>
+		<div id="listAddress" class="section_body2">
+			<h1 onclick="changeSection(5,7)" class="boton agregar">+</h1>
 		</div>
 	</section>
-	<!-- Nueva dirección -->
-	<section id="newAddress">
+	<!-- dirección 6-->
+	<section id="direcciones" class="oculto">
 		<div class="section_header">
 			<div class="boton_back">
-				<i class="arrow-left boton"></i>
+				<i onclick="changeSection(6,2)" class="arrow-left boton"></i>
+			</div>
+			<h1 class="title">Lista de Direcciones</h1>
+		</div>
+		<div id="listAddress2" class="section_body2">
+			<h1 onclick="changeSection(6,8)" class="boton agregar">+</h1>
+		</div>
+		<div class="section_footer">
+			<a href="#pedido" onclick="changeSection(6,2)" class="boton boton2">Guardar</a>
+		</div>
+	</section>
+	<!-- Nueva dirección 7-->
+	<section id="newAddress" class="oculto">
+		<div class="section_header">
+			<div class="boton_back">
+				<i onclick="changeSection(7,5)" class="arrow-left boton"></i>
 			</div>
 			<h1 class="title">Nueva dirección</h1>
 		</div>
@@ -143,21 +113,50 @@
 			<div>
 				<label for="name" class="letter">Nombre dirección:</label>
 				<br>
-				<input name="name" id="nameAdress" type="text" class="letter">
+				<input name="name" id="nameAddress1" type="text" class="letter">
 			</div>
 			<div>
 				<label for="barrio" class="letter">Barrio:</label>
 				<br>
-				<input type="text" name="barrio" id="nameBarrio" class="letter">
+				<input type="text" name="barrio" id="nameBarrio1" class="letter">
 			</div>
 			<div>
 				<label for="address" class="letter">Dirección:</label>
 				<br>
-				<input type="text" id="inputAddress" name="address" class="letter">
+				<input type="text" id="inputAddress1" name="address" class="letter">
 			</div>
 		</div>
 		<div class="section_footer">
-			<a href="#pedido" class="boton boton2">Guardar</a>
+			<a href="#pedido" onclick="saveAddress(1)" class="boton boton2">Guardar</a>
+		</div>
+	</section>
+	<!-- Nueva dirección 8-->
+	<section id="newAddress2" class="oculto">
+		<div class="section_header">
+			<div class="boton_back">
+				<i onclick="changeSection(8,6)" class="arrow-left boton"></i>
+			</div>
+			<h1 class="title">Nueva dirección</h1>
+		</div>
+		<div class="section_body">
+			<div>
+				<label for="name" class="letter">Nombre dirección:</label>
+				<br>
+				<input name="name" id="nameAddress2" type="text" class="letter">
+			</div>
+			<div>
+				<label for="barrio" class="letter ">Barrio:</label>
+				<br>
+				<input type="text" name="barrio" id="nameBarrio2" class="letter">
+			</div>
+			<div>
+				<label for="address" class="letter ">Dirección:</label>
+				<br>
+				<input type="text" id="inputAddress2" name="address" class="letter">
+			</div>
+		</div>
+		<div class="section_footer">
+			<a href="#pedido" onclick="saveAddress(2)" class="boton boton2">Guardar</a>
 		</div>
 	</section>
 </body>
